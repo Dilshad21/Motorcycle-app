@@ -7,7 +7,10 @@ import java.util.HashMap;
 import org.junit.Test;
 
 public class BikeManagerTest {
-
+	
+	/**
+	 * Add bike to existing one and display it
+	 */
 	@Test
 	public void testAddingBike() {
 		BikeSpecification bike3 = new BikeSpecification();
@@ -33,12 +36,18 @@ public class BikeManagerTest {
 
 	}
 
+	/**
+	 * Validate the plate number
+	 */
 	@Test
 	public void testValidation() {
 		boolean a = BikeManager.validatePlateNo("TN-67A0000");
 		assertTrue(a);
 	}
 
+	/**
+	 * Revising the price of particular bike
+	 */
 	@Test
 	public void testPriceRevision() {
 
@@ -53,7 +62,10 @@ public class BikeManagerTest {
 			assertEquals(price, revisedPrice);
 		}
 	}
-
+	
+	/**
+	 * Count the available bikes, remove one bike and check
+	 */
 	@Test
 	public void testCount() {
 		HashMap<String, BikeSpecification> allBikes = BikeManager.getAllBikes();
